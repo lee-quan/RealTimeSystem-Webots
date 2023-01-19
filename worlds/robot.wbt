@@ -1,0 +1,162 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/baddb7ce689513a67ee2572b7ddfd6fab88dd7a9/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/baddb7ce689513a67ee2572b7ddfd6fab88dd7a9/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/baddb7ce689513a67ee2572b7ddfd6fab88dd7a9/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/baddb7ce689513a67ee2572b7ddfd6fab88dd7a9/projects/appearances/protos/Copper.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/baddb7ce689513a67ee2572b7ddfd6fab88dd7a9/projects/robots/universal_robots/protos/UR5e.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/baddb7ce689513a67ee2572b7ddfd6fab88dd7a9/projects/objects/factory/containers/protos/PlasticCrate.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/baddb7ce689513a67ee2572b7ddfd6fab88dd7a9/projects/objects/factory/conveyors/protos/ConveyorBelt.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/baddb7ce689513a67ee2572b7ddfd6fab88dd7a9/projects/devices/robotiq/protos/Robotiq3fGripper.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.4126103506401516 -0.3224242405249457 0.8519362110313913 4.316299831111082
+  position 2.809210082168571 3.6976395552289514 3.1832488416463134
+}
+TexturedBackground {
+  texture "empty_office"
+}
+TexturedBackgroundLight {
+  castShadows FALSE
+}
+RectangleArena {
+  floorSize 10 10
+  floorTileSize 1 1
+}
+ConveyorBelt {
+  hidden translation_1 -0.000414561845416328 -8.595080128270816e-05 0.14934736467242768
+  hidden rotation_1 0.008169925560108126 0.9797819607612088 -0.19990137989334408 0.000412865915412303
+  hidden linearVelocity_1 -2.8404134038888368e-05 -1.7676484204888912e-06 -7.600354450971736e-06
+  hidden angularVelocity_1 1.5557862430955983e-05 -1.6010013467679125e-06 -3.0512735353042962e-05
+  translation 1.14599 1.2006 -1.11022e-15
+  rotation 9.58972e-09 9.58974e-09 1 -1.5707953071795862
+  size 10 0.2 0.2
+}
+Solid {
+  translation 0.7743026481639078 0.2112233047414438 0.056607599999999474
+  rotation 1.7547036443311962e-14 8.52886867968714e-15 -1 1.7145787930761078
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 0 0
+        metalness 0
+      }
+      geometry DEF box Box {
+        size 0.1 0.1 0.1
+      }
+    }
+  ]
+  name "solid(1)"
+  boundingObject USE box
+  physics Physics {
+  }
+  recognitionColors [
+    1 0 0
+  ]
+}
+Solid {
+  translation 1.1831083731008418 0.9073270481090009 0.24882888205867426
+  rotation -0.55624882651255 -0.6171590816054888 -0.5565086800718213 2.035422888968745
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 1 0
+        metalness 0
+      }
+      geometry DEF box Box {
+        size 0.1 0.1 0.1
+      }
+    }
+  ]
+  name "solid(2)"
+  boundingObject USE box
+  physics Physics {
+  }
+  recognitionColors [
+    0 1 0
+  ]
+  linearVelocity -6.579916550027772e-05 -0.5000102392055383 -0.0001556695104269572
+  angularVelocity 0.00013449056061017132 0.00021856870391358233 -3.042310199016399e-05
+}
+PlasticCrate {
+  translation 0.828736 0.186858 2.22045e-16
+  size 0.35 0.6 0.2
+}
+PlasticCrate {
+  translation -0.180974 0.05 0
+  name "plastic crate(1)"
+  size 0.35 0.6 0.2
+}
+PlasticCrate {
+  translation -0.532182 0.05 0
+  name "plastic crate(2)"
+  size 0.35 0.6 0.2
+}
+Solid {
+  translation 0.443441 -4.35475e-05 0.1
+  children [
+    Shape {
+      appearance Copper {
+      }
+      geometry Box {
+        size 0.4 0.6 0.2
+      }
+    }
+  ]
+}
+UR5e {
+  hidden position_0_0 9.793281410201991e-06
+  hidden rotation_1 0 0 1 9.793271684920737e-06
+  hidden position_1_0 -1.9821169356267087e-05
+  hidden rotation_2 0 1 0 1.5707761788306438
+  hidden position_2_0 3.205262917947004e-05
+  hidden rotation_3 0 1 0 3.2052629800411994e-05
+  hidden position_3_0 8.238735993361298e-05
+  hidden rotation_4 0 0.9999999999999999 0 1.5708783873599328
+  hidden position_4_0 -0.24185250344184706
+  hidden rotation_5 0 0 -1 0.24185250344184783
+  hidden position_5_0 4.5940995647176464e-05
+  hidden rotation_6 0 1 0 4.5940992872515626e-05
+  hidden position_8_0 1.1479693959630696e-05
+  hidden position_8_1 1.1478938830561468e-05
+  hidden position_8_2 0.049499786762071736
+  hidden rotation_9 0.7068252250190651 0.7073882252532522 7.057070411347808e-06 3.141606120598691
+  hidden position_9_0 0.049511834885446825
+  hidden rotation_10 0 0 1 1.1834787031182253e-05
+  hidden position_10_0 3.146244558196628e-08
+  hidden rotation_11 0 0 -1 0.5199999685519215
+  hidden position_11_0 -0.05229999999995703
+  hidden rotation_13 0.7068252250190684 0.7073882252532515 7.056803539156524e-06 3.1416061200645222
+  hidden position_13_0 0.04951183566195572
+  hidden rotation_14 0 0 1 1.1835687574260846e-05
+  hidden position_14_0 3.1462930341465146e-08
+  hidden rotation_15 0 0 -1 0.5199999685511779
+  hidden position_15_0 -0.052299999999949595
+  hidden rotation_17 0 0 -1 2.1283115233608642e-07
+  hidden position_17_0 -3.100586410794323e-08
+  hidden rotation_18 0 0 -1 0.5200000308477094
+  hidden position_18_0 -0.052300000000108586
+  translation 0.326356 -0.0829526 0.2
+  controller "my_controller"
+  toolSlot [
+    DistanceSensor {
+      translation 0 0.1 0
+    }
+    Robotiq3fGripper {
+      rotation 0 0 1 0.261799
+    }
+    Camera {
+      translation 0 0.1 0
+      rotation 0 0 1 1.7017003061004252
+      name "CAM"
+      fieldOfView 1.4
+      width 360
+      height 270
+      antiAliasing TRUE
+      recognition Recognition {
+      }
+    }
+  ]
+}
