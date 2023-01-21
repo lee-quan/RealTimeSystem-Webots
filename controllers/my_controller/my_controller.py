@@ -51,11 +51,11 @@ positionSensor.enable(timestep)
 # Main loop:
 # - perform simulation steps until Webots is stopping the controller
 while robot.step(timestep) != -1:
-    print(distanceSensor.getValue())
     numOfObjects = camera.getRecognitionNumberOfObjects();
     
     objects = camera.getRecognitionObjects()
     for i in objects:
+        print(i.model)
         for j in range(i.getNumberOfColors()):
             a=i.getColors()[3*j]
             b=i.getColors()[3*j+1]
@@ -65,7 +65,7 @@ while robot.step(timestep) != -1:
         
         match status:
             case 'WAITING':
-                if(distanceSensor.getValue() < 500):
+                if(distanceSensor.getValue() < 150):
                     counter=8
                     print(counter, "COUNTER!!")
                     status='GRABBING'
