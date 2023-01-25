@@ -11,10 +11,11 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/baddb7ce689513
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/baddb7ce689513a67ee2572b7ddfd6fab88dd7a9/projects/objects/drinks/protos/Can.proto"
 
 WorldInfo {
+  basicTimeStep 16
 }
 Viewpoint {
-  orientation 0.11286665438997266 0.14813540991632665 -0.982505480216643 1.3192224059650355
-  position -3.196012261068011 6.956995759331225 1.8017637049330937
+  orientation -0.010848466611363197 0.012150437521611605 -0.9998673300194457 4.821612053697928
+  position 1.1661099742574157 -4.690217269756285 0.7959593647487574
   followType "None"
 }
 TexturedBackground {
@@ -27,10 +28,36 @@ RectangleArena {
   floorSize 10 10
   floorTileSize 1 1
 }
+Can {
+  hidden linearVelocity_0 -2.6832679126305832e-17 -4.5785319722119745e-17 6.162975822039155e-33
+  hidden angularVelocity_0 7.419199138332819e-16 -4.040813816413418e-16 -3.6933507242322185e-17
+  translation 2.2676995397005455 2.521401732731176 0.06103133
+  rotation 2.620889387219496e-16 -5.529447834637e-16 1 0.051672183430794806
+  name "can(1)"
+}
 Solid {
-  translation -0.238372 2.21536 0.1
-  scale 0.001 0.001 0.001
+  translation 2.3390136836979885 1.7556428546631362 -0.001003874550334155
+  rotation 0.9883168275844358 -0.10782160438631096 -0.10772348834399345 1.5825399854283169
+  scale 0.0007 0.0007 0.0007
   children [
+    Solid {
+      translation 0 126 0
+      rotation 1 0 0 -1.5707953071795862
+      children [
+        DEF base Shape {
+          appearance PBRAppearance {
+            baseColor 0 1 1
+            transparency 1
+          }
+          geometry Box {
+            size 80 80 250
+          }
+        }
+      ]
+      boundingObject USE base
+      physics Physics {
+      }
+    }
     DEF bottle Shape {
       appearance PBRAppearance {
         transparency 0.5
@@ -38,23 +65,23 @@ Solid {
       }
       geometry Mesh {
         url [
-          "../../../../Downloads/WaterBottle.stl"
+          "texture/pet_water_bottle_1500ml (1).obj"
         ]
         ccw FALSE
         materialIndex 1
       }
-      isPickable FALSE
     }
   ]
-  boundingObject Box {
-    size 0.1 0.1 0.1
-  }
+  name "bottle"
   physics Physics {
   }
+  recognitionColors [
+    0 0 1
+  ]
 }
 Solid {
-  translation 1.2185099396146852 2.6469425466653576 0.2435188545919164
-  rotation 0.9999999914443889 5.3840899847001375e-05 -0.00011921568567979508 3.0952985567322115
+  translation 2.3938965640955634 2.9712921332578874 0.04980379999999999
+  rotation -0.9999999988107418 3.4485623497455264e-05 -3.4485623497453326e-05 1.5707963279841546
   children [
     Shape {
       appearance PBRAppearance {
@@ -72,20 +99,23 @@ Solid {
   ]
   name "crumpledpaper"
   model "paper"
-  boundingObject USE sphere
+  boundingObject Box {
+    size 0.1 0.1 0.1
+  }
   physics Physics {
   }
   recognitionColors [
     1 1 1
   ]
-}
-Can {
-  translation 0.7535352468184755 0.8574025731428665 0.03847532331965346
-  rotation -0.21741696390203907 -0.8722143445545816 0.4381460954531501 1.8106709791488427
+  linearVelocity 2.5161370615430795e-18 2.220810515095989e-16 1.4210854715202e-16
+  angularVelocity -4.396483177515618e-15 -3.996802888650561e-16 -1.8336377459460756e-16
 }
 ConveyorBelt {
+  hidden translation_1 3.3261615683954915e-11 -5.988542994828094e-13 0.1387180996535621
+  hidden rotation_1 -0.09244710483965914 -0.9957175969152082 4.1013849567051873e-07 1.5232431537092567e-06
   translation 1.20908 1.1872 -8.88175e-16
   rotation 9.58972e-09 9.58974e-09 1 -1.5707953071795862
+  name "conveyorbelt"
   size 10 0.18 0.185
   speed 0.3
 }
@@ -117,6 +147,54 @@ Solid {
   name "robot_stand"
 }
 UR5e {
+  hidden position_0_0 -0.00012481141498479954
+  hidden translation_1 0 0 0.163
+  hidden rotation_1 0 0 -1 0.00012481141456561004
+  hidden position_1_0 0.00014976447549216857
+  hidden translation_2 0 0.138 0
+  hidden rotation_2 0 1 0 1.5709457644754918
+  hidden position_2_0 4.920193377719335e-05
+  hidden translation_3 0 -0.131 0.425
+  hidden rotation_3 0 1 0 4.920193743315612e-05
+  hidden position_3_0 -1.666677572444181e-05
+  hidden translation_4 0 0 0.392
+  hidden rotation_4 0 1 0 1.5707793332242757
+  hidden position_4_0 6.306463168462357e-06
+  hidden translation_5 0 0.127 0
+  hidden rotation_5 0 0 1 6.306484080356095e-06
+  hidden position_5_0 6.2821383134209855e-06
+  hidden translation_6 0 0 0.1
+  hidden rotation_6 0 1 0 6.282142938598883e-06
+  hidden position_8_0 2.1436417296624877e-05
+  hidden position_8_1 2.143491124922646e-05
+  hidden position_8_2 0.04950000127385449
+  hidden translation_9 -0.0455 0.0214 0.036
+  hidden rotation_9 0.7068252249733048 0.7073882252551194 1.0575902731835421e-05 3.1416131638661136
+  hidden position_9_0 0.049523300877780396
+  hidden translation_10 0.02 0 0
+  hidden rotation_10 0 0 0.9999999999999999 2.3300804294214245e-05
+  hidden position_10_0 1.7999709626686742e-10
+  hidden translation_11 0.05 -0.028 0
+  hidden rotation_11 0 0 -1 0.519999999819999
+  hidden position_11_0 -0.05229999999996517
+  hidden translation_12 0.039 0 0
+  hidden translation_13 -0.0455 0.0214 -0.036
+  hidden rotation_13 0.7068252249733119 0.7073882252551202 1.0575370475581788e-05 3.1416131628007538
+  hidden position_13_0 0.049523302392775935
+  hidden translation_14 0.02 0 0
+  hidden rotation_14 0 0 1 2.3302405192265657e-05
+  hidden position_14_0 1.800199749508886e-10
+  hidden translation_15 0.05 -0.028 0
+  hidden rotation_15 0 0 -1 0.5199999998199757
+  hidden position_15_0 -0.05229999999996405
+  hidden translation_16 0.039 0 0
+  hidden translation_17 0.02 0 0
+  hidden rotation_17 0 0 1 0
+  hidden position_17_0 1.8515423845779143e-10
+  hidden translation_18 0.05 -0.028 0
+  hidden rotation_18 0 0 -1 0.5199999998148461
+  hidden position_18_0 -0.05230000000006442
+  hidden translation_19 0.039 0 0
   translation 0.361357 -0.0147605 0.2
   controller "my_controller"
   toolSlot [

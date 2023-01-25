@@ -1,0 +1,260 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/baddb7ce689513a67ee2572b7ddfd6fab88dd7a9/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/baddb7ce689513a67ee2572b7ddfd6fab88dd7a9/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/baddb7ce689513a67ee2572b7ddfd6fab88dd7a9/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/baddb7ce689513a67ee2572b7ddfd6fab88dd7a9/projects/appearances/protos/Copper.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/baddb7ce689513a67ee2572b7ddfd6fab88dd7a9/projects/objects/factory/containers/protos/PlasticCrate.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/baddb7ce689513a67ee2572b7ddfd6fab88dd7a9/projects/objects/drinks/protos/Can.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/baddb7ce689513a67ee2572b7ddfd6fab88dd7a9/projects/robots/universal_robots/protos/UR5e.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/baddb7ce689513a67ee2572b7ddfd6fab88dd7a9/projects/devices/robotiq/protos/Robotiq3fGripper.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/baddb7ce689513a67ee2572b7ddfd6fab88dd7a9/projects/robots/kuka/youbot/protos/Youbot.proto"
+EXTERNPROTO "../protos/MyOwnConveyorBelt.proto"
+
+WorldInfo {
+  basicTimeStep 16
+}
+Viewpoint {
+  orientation 0.22117388884807565 0.24828090896816984 -0.9431005784823581 1.5139820149497252
+  position -0.8121671988755668 5.457240498815315 2.3198131654127305
+  followType "None"
+}
+TexturedBackground {
+  texture "empty_office"
+}
+TexturedBackgroundLight {
+  castShadows FALSE
+}
+RectangleArena {
+  floorSize 10 10
+  floorTileSize 1 1
+  wallHeight 1
+}
+Youbot {
+  hidden position_0_0 1.4399990128670255
+  hidden position_0_1 1.4399990177115063
+  hidden position_0_2 1.439998729872671
+  hidden position_0_3 1.4399987303595334
+  hidden linearVelocity_0 0.300162839169638 1.9123827336620023e-05 -8.603624391096334e-06
+  hidden angularVelocity_0 -1.558122185140006e-06 0.002196778933510913 9.183802888078875e-09
+  hidden position_1_0 1.256808095687403e-06
+  hidden rotation_2 0 0 1 1.2566547776644446e-06
+  hidden position_2_0 1.570002725711964
+  hidden linearVelocity_2 0.30054489966930614 1.9520940272724806e-05 -0.0003794209403379066
+  hidden angularVelocity_2 -1.5458856047034488e-06 0.0021982080871211056 8.969311026999296e-06
+  hidden rotation_3 0 -0.9999999999999999 0 1.5700027257119638
+  hidden position_3_0 -2.6350013106013623
+  hidden linearVelocity_3 0.3005987034167416 1.901188392618768e-05 -0.0002475519104453499
+  hidden angularVelocity_3 -1.5454525388531789e-06 0.0021991647256584387 9.007326707757202e-06
+  hidden rotation_4 0 1 0 2.6350013106013623
+  hidden position_4_0 1.7800004384646682
+  hidden linearVelocity_4 0.300673564407866 1.8876752167647e-05 -0.00020340801082123519
+  hidden angularVelocity_4 -1.5458424402419462e-06 0.002197534588906957 8.94829075050596e-06
+  hidden rotation_5 0 -1 0 1.780000438464668
+  hidden position_5_0 1.1792831665973872e-07
+  hidden linearVelocity_5 0.30079461800013574 1.9355829906938717e-05 -0.00030069905564722064
+  hidden angularVelocity_5 -1.5458333546492204e-06 0.0021977257823071524 8.948257942524161e-06
+  hidden rotation_6 0 0 1 1.1920928955078128e-07
+  hidden position_6_0 3.273497591111621e-11
+  hidden position_6_1 -1.2817751998230238e-11
+  hidden linearVelocity_6 0.30096167066305324 1.8887054476321678e-05 -0.0001568780232362484
+  hidden angularVelocity_6 -2.0145943856796694e-06 0.0021977641378412003 9.489679307805015e-06
+  hidden translation_7 0 3.273497591111621e-11 0.09
+  hidden linearVelocity_7 0.301069676339865 1.8582338077326994e-05 -6.340921938529456e-05
+  hidden angularVelocity_7 -2.014595820302572e-06 0.002197766236152175 9.489251203015668e-06
+  hidden linearVelocity_8 0.30106986792411655 1.8582307456566665e-05 -6.337177262925779e-05
+  hidden angularVelocity_8 -2.014593149969081e-06 0.0021977662362084767 9.490107312898333e-06
+  hidden rotation_9 0 1 0 1.4399990128670255
+  hidden linearVelocity_9 0.30010955160008246 1.9075078542041177e-05 -0.0004937112208598655
+  hidden angularVelocity_9 -0.0003819785323211508 6.002196733630666 -0.00024229750756741858
+  hidden rotation_10 0 1 0 1.4399988292250696
+  hidden linearVelocity_10 0.30010956647545783 1.907506874637631e-05 -0.0004941508259805972
+  hidden angularVelocity_10 -0.0003819785329964686 6.002196735110803 -0.00024229751016966822
+  hidden rotation_11 0 0.9999999999999999 0 1.4399988087222046
+  hidden linearVelocity_11 0.3001104272783881 1.9122878345931474e-05 0.0004884164655935313
+  hidden angularVelocity_11 -0.00038197619522176867 6.002196820763206 -0.00024229955989112835
+  hidden rotation_12 0 1 0 1.4399988092090668
+  hidden linearVelocity_12 0.3001104421537632 1.912286854923394e-05 0.0004879768604713775
+  hidden angularVelocity_12 -0.00038197619581323977 6.002196822243343 -0.0002422995625005044
+  translation -0.18429090649749316 2.4772109236960875 0.10193761605121282
+  rotation -0.02772981959774913 0.9986705568494562 0.043453147033024664 0.0014584951143483003
+  controller "youbot1"
+}
+Can {
+  translation -0.6016165664196458 0.30620265938464075 0.068085735393891
+  rotation -0.0001913983849231166 -0.00029233932847508293 0.9999999389521856 2.0702295066873586
+  name "can(1)"
+}
+Solid {
+  translation 0.0002497052348562212 0.3230044322633287 0.005270283545258832
+  rotation 0.9987665180022121 0.03511195920130901 0.03510830156505005 1.5720334054277374
+  scale 0.0007 0.0007 0.0007
+  children [
+    Solid {
+      translation 0 157 0
+      rotation 1 0 0 -1.5707953071795862
+      children [
+        DEF base Shape {
+          appearance PBRAppearance {
+            baseColor 0 1 1
+            transparency 1
+          }
+          geometry Box {
+            size 80 80 310
+          }
+        }
+      ]
+      boundingObject USE base
+      physics Physics {
+      }
+    }
+    DEF bottle Shape {
+      appearance PBRAppearance {
+        transparency 0.5
+        metalness 0
+      }
+      geometry Mesh {
+        url [
+          "texture/pet_water_bottle_1500ml (1).obj"
+        ]
+        ccw FALSE
+        materialIndex 1
+      }
+    }
+  ]
+  name "bottle"
+  model "bottle"
+  physics Physics {
+  }
+  recognitionColors [
+    0 0 1
+  ]
+}
+Solid {
+  translation 0.8775120099571186 0.6784088024131423 0.05680380000000155
+  rotation -0.5241619695147485 0.6711992695383688 0.5241619695147484 1.9593246569106664
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColorMap ImageTexture {
+          url [
+            "texture/paper.jpeg"
+          ]
+        }
+        metalness 0
+      }
+      geometry DEF sphere Sphere {
+        radius 0.06
+      }
+    }
+  ]
+  name "crumpledpaper"
+  model "paper"
+  boundingObject Box {
+    size 0.1 0.1 0.1
+  }
+  physics Physics {
+  }
+  recognitionColors [
+    1 1 1
+  ]
+}
+PlasticCrate {
+  translation 0.818727 -0.00960482 1.55431e-15
+  size 0.35 2 0.2
+}
+PlasticCrate {
+  translation -0.045347 -0.0377678 -6.66134e-16
+  name "plastic crate(1)"
+  size 0.35 2 0.2
+}
+PlasticCrate {
+  translation -0.521614 -0.0277883 -2.22045e-16
+  name "plastic crate(2)"
+  size 0.35 2 0.2
+}
+Robot {
+  translation 0.443441 -4.35475e-05 0.1
+  children [
+    DEF conveyor MyOwnConveyorBelt {
+      hidden translation_1 0 7.365863474717571e-11 0.1499843040000005
+      hidden rotation_1 -1 0 0 8.470329472543003e-22
+      hidden linearVelocity_1 0 0 -6.536901541752298e-16
+      speed 0.3
+    }
+    Receiver {
+    }
+    DEF ur5e UR5e {
+      hidden position_0_0 2.2639810174384257e-05
+      hidden rotation_1 -0.242658142373773 0.8705402467316201 -0.42810828625496106 6.881429163967204e-05
+      hidden position_1_0 -0.008756006117767721
+      hidden translation_2 1.1410748569937192e-06 0.1380000039403266 -0.00012626120550587926
+      hidden rotation_2 -1.6286286538894854e-08 0.9999999999999997 -1.4209524456964867e-08 1.5620400200922324
+      hidden position_2_0 -0.0001407447474254675
+      hidden translation_3 6.302718780446793e-05 -0.1309999975624003 0.42500003124884855
+      hidden rotation_3 2.05822823992264e-05 -0.9980878359665263 -0.061811578786067654 0.00013406650169982246
+      hidden position_3_0 -6.88997498602421e-05
+      hidden translation_4 4.0691804873088826e-05 1.966986953524907e-09 0.39200001715419247
+      hidden rotation_4 4.1452019136077675e-06 0.9999999999828306 -4.142027735020484e-06 1.5707202516585095
+      hidden position_4_0 1.392354775177641e-05
+      hidden rotation_5 0.1853020804066944 0.02251896496779455 0.9824235518419385 1.6831057808855236e-05
+      hidden position_5_0 -3.508757415009058e-05
+      hidden translation_6 -7.57772693701603e-09 1.0884269041611035e-09 0.10001973768918004
+      hidden rotation_6 0.09562829695404505 -0.995417112368016 3.502269989865149e-05 3.260809905894664e-05
+      hidden position_9_0 3.144490960587114e-05
+      hidden position_9_1 3.1687990893195015e-05
+      hidden position_9_2 0.049500107566174685
+      hidden rotation_10 0.7068252249184828 0.707388225248172 1.4113030863889867e-05 3.141620243754277
+      hidden position_10_0 0.049546581676459825
+      hidden rotation_11 0 0 1 4.6581601911051376e-05
+      hidden position_11_0 -1.475042046707249e-08
+      hidden rotation_12 0 0 -1 0.5200000077642228
+      hidden position_12_0 -0.052300000000115844
+      hidden rotation_14 0.706825224917044 0.7073882252478907 1.4198938874129719e-05 3.141620415707086
+      hidden position_14_0 0.04954659074901218
+      hidden rotation_15 0 0 1 4.659064839557437e-05
+      hidden position_15_0 -1.5027588659866223e-08
+      hidden rotation_16 0 0 -1 0.520000009800113
+      hidden position_16_0 -0.05230000000011524
+      hidden rotation_18 0 0 1 1.0745380149674385e-07
+      hidden position_18_0 6.989605476816427e-11
+      hidden rotation_19 0 0 -1 0.5200000000435141
+      hidden position_19_0 -0.052299999999988675
+      translation 0 0 0.1
+      controller "my_controller"
+      toolSlot [
+        Emitter {
+          translation 0 0.08 0
+        }
+        DistanceSensor {
+          translation 0 0.1 0
+          rotation 0 0 1 1.8325996938995748
+        }
+        Robotiq3fGripper {
+          rotation 0 0 1 0.261799
+        }
+        Camera {
+          translation 0 0.1 0
+          rotation 0 0 1 1.9635290795404021
+          name "CAM"
+          fieldOfView 1.4
+          width 360
+          height 270
+          antiAliasing TRUE
+          recognition Recognition {
+          }
+        }
+      ]
+    }
+    Shape {
+      appearance Copper {
+      }
+      geometry Box {
+        size 0.4 0.6 0.2
+      }
+    }
+  ]
+  name "robot_stand"
+  controller "supervisorController"
+  supervisor TRUE
+}

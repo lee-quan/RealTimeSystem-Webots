@@ -1,0 +1,420 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/baddb7ce689513a67ee2572b7ddfd6fab88dd7a9/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/baddb7ce689513a67ee2572b7ddfd6fab88dd7a9/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/baddb7ce689513a67ee2572b7ddfd6fab88dd7a9/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/baddb7ce689513a67ee2572b7ddfd6fab88dd7a9/projects/appearances/protos/Copper.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/baddb7ce689513a67ee2572b7ddfd6fab88dd7a9/projects/objects/factory/containers/protos/PlasticCrate.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/baddb7ce689513a67ee2572b7ddfd6fab88dd7a9/projects/objects/drinks/protos/Can.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/baddb7ce689513a67ee2572b7ddfd6fab88dd7a9/projects/robots/universal_robots/protos/UR5e.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/baddb7ce689513a67ee2572b7ddfd6fab88dd7a9/projects/devices/robotiq/protos/Robotiq3fGripper.proto"
+EXTERNPROTO "../protos/MyOwnConveyorBelt.proto"
+
+WorldInfo {
+  basicTimeStep 16
+}
+Viewpoint {
+  orientation 0.3100417423038328 -0.0295848466382443 -0.9502625189275832 3.322581524438014
+  position 4.312219656042834 -0.07426422092229135 3.07918662048857
+  followType "None"
+}
+TexturedBackground {
+  texture "empty_office"
+}
+TexturedBackgroundLight {
+  castShadows FALSE
+}
+RectangleArena {
+  floorSize 10 10
+  floorTileSize 1 1
+}
+Can {
+  hidden linearVelocity_0 2.4903576237689162e-05 -0.29996521001459264 -3.40785192838232e-05
+  hidden angularVelocity_0 -0.000570774270546092 0.00042569395930088546 4.104657036044166e-09
+  translation 1.2927680339025378 0.5506596199342606 0.2610664592797481
+  rotation 0.5170098866982605 0.8559794075565345 0.00017577091860055332 -3.1412121337195797
+  name "can(1)"
+}
+Solid {
+  translation -0.18209834071767236 0.354353459296286 0.01297062815468586
+  rotation 0.9796546486257722 0.1432835150605281 -0.14052260934744315 1.5920832491260923
+  scale 0.0007 0.0007 0.0007
+  children [
+    Solid {
+      translation 0 157 0
+      rotation 1 0 0 -1.5707953071795862
+      children [
+        DEF base Shape {
+          appearance PBRAppearance {
+            baseColor 0 1 1
+            transparency 1
+          }
+          geometry Box {
+            size 80 80 310
+          }
+        }
+      ]
+      boundingObject USE base
+      physics Physics {
+      }
+    }
+    DEF bottle Shape {
+      appearance PBRAppearance {
+        transparency 0.5
+        metalness 0
+      }
+      geometry Mesh {
+        url [
+          "texture/pet_water_bottle_1500ml (1).obj"
+        ]
+        ccw FALSE
+        materialIndex 1
+      }
+    }
+  ]
+  name "bottle"
+  model "bottle"
+  physics Physics {
+  }
+  recognitionColors [
+    0 0 1
+  ]
+  linearVelocity -0.0009846389950390899 -3.2354947011612015e-05 -0.0003016796614671289
+  angularVelocity 0.0007154220764661331 -0.021171034627497972 -0.00027039542511876223
+}
+Solid {
+  translation 0.897586139199948 0.5473315701592585 0.056803799999979476
+  rotation 2.6580892207660593e-13 -1.2484571417458216e-13 0.9999999999999999 1.828707964552457
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColorMap ImageTexture {
+          url [
+            "texture/paper.jpeg"
+          ]
+        }
+        metalness 0
+      }
+      geometry DEF sphere Sphere {
+        radius 0.06
+      }
+    }
+  ]
+  name "crumpledpaper"
+  model "paper"
+  boundingObject Box {
+    size 0.1 0.1 0.1
+  }
+  physics Physics {
+  }
+  recognitionColors [
+    1 1 1
+  ]
+  linearVelocity -1.6683406843199682e-13 3.2430073048583815e-13 3.4671643334149293e-13
+  angularVelocity -6.486144954464807e-12 -3.3367975049716526e-12 3.903275904048231e-19
+}
+PlasticCrate {
+  translation 0.818727 -0.00960482 1.55431e-15
+  size 0.35 2 0.2
+}
+PlasticCrate {
+  translation -0.045347 -0.0377678 -6.66134e-16
+  name "plastic crate(1)"
+  size 0.35 2 0.2
+}
+PlasticCrate {
+  translation -0.521614 -0.0277883 -2.22045e-16
+  name "plastic crate(2)"
+  size 0.35 2 0.2
+}
+Robot {
+  translation 0.443441 -4.35475e-05 0.1
+  children [
+    Receiver {
+    }
+    DEF conveyor MyOwnConveyorBelt {
+      hidden translation_1 -5.396809850122253e-07 1.8815378366454638e-08 0.14998291310928155
+      hidden rotation_1 0.00034968141721734375 0.9999950066101628 0.0031407765992992527 1.6806257468561744e-06
+      hidden linearVelocity_1 5.878837963199761e-10 -3.4233738398510304e-08 -1.4715309976053374e-07
+      hidden angularVelocity_1 8.430490093556988e-07 4.0933944277457086e-11 3.285353815644323e-10
+      translation 0.85 1 -0.1
+      size 2 0.3 0.2
+      speed 0.3
+    }
+    DEF ur5e UR5e {
+      hidden position_0_0 -6.842989890011076e-05
+      hidden rotation_1 -0.12309873770285706 0.4416965918819951 -0.888679256816425 0.0001356278742026622
+      hidden position_1_0 -0.16942548799982127
+      hidden linearVelocity_1 -1.7344380199782134e-05 5.966702730200174e-06 -1.8123236166411848e-06
+      hidden angularVelocity_1 -1.009160349020679e-06 5.132632367438452e-07 -0.0006118931992620889
+      hidden translation_2 2.1325532499890733e-05 0.1380000039403266 -0.00012445246374107377
+      hidden rotation_2 -1.6480812794325876e-08 0.9999999999999998 -1.6892655932142534e-08 1.4013705382101782
+      hidden position_2_0 -0.208065104051408
+      hidden linearVelocity_2 8.112304612263055e-05 -0.00011529574869051403 -4.213063035797809e-06
+      hidden angularVelocity_2 -1.7829406630647524e-06 3.6127736567644816e-06 -0.0006077508793374863
+      hidden translation_3 6.166322575163347e-05 -0.1309999975624003 0.42501304124108097
+      hidden rotation_3 4.153962259686651e-06 -0.999999999203947 -3.9684388258754155e-05 0.20805816967219457
+      hidden position_3_0 -0.0411609558336708
+      hidden linearVelocity_3 1.0156106311667164e-06 -0.0003222073504536677 -6.084682157917103e-06
+      hidden angularVelocity_3 -2.239940928895146e-06 4.482306213918143e-06 -0.0006059231681084703
+      hidden translation_4 4.0656749786897884e-05 1.9669869535249114e-09 0.39200168877910385
+      hidden rotation_4 4.319075189648514e-06 0.9999999999820948 -4.141967751712649e-06 1.5296281955754192
+      hidden position_4_0 1.5372366725709886e-05
+      hidden linearVelocity_4 7.745664102333364e-05 -0.00045490881735164407 -7.822218163630069e-06
+      hidden angularVelocity_4 -2.1086731837569896e-06 0.0001071527871822584 -0.0006055758894930207
+      hidden rotation_5 0.17083585450390318 0.020761072326482454 0.9850807523709798 1.825637338694967e-05
+      hidden position_5_0 -9.689551018844105e-06
+      hidden linearVelocity_5 6.694385374592358e-05 -0.00047712319788600845 -1.2513096443433955e-05
+      hidden angularVelocity_5 4.877159558783355e-06 0.00010722552109900726 -0.0006206259723767695
+      hidden translation_6 -7.07642864827404e-09 1.0884269041611008e-09 0.10001973768936613
+      hidden rotation_6 0.40403444598680077 -0.9147437597777544 0.00014284185970428226 7.718571361223477e-06
+      hidden linearVelocity_6 0.00014177427149798103 -0.0004754320844659514 -1.214843785805839e-05
+      hidden angularVelocity_6 4.829034701618544e-06 0.00014272742661529657 -0.0006204916550625962
+      hidden position_9_0 5.022605347186877e-05
+      hidden position_9_1 5.144336797548792e-05
+      hidden position_9_2 0.049500187380678205
+      hidden rotation_10 0.7068252247917471 0.7073882252112429 2.0750525330875846e-05 3.141633529311613
+      hidden position_10_0 0.04951163462562227
+      hidden linearVelocity_10 0.00016880907256563662 -0.0005163940127931705 -1.816028668258674e-05
+      hidden angularVelocity_10 9.807435657853715e-05 0.00011533300968149156 -0.000579132741344961
+      hidden rotation_11 0 0 1 1.163451519730666e-05
+      hidden position_11_0 5.286594970796831e-09
+      hidden linearVelocity_11 0.00019214404216957653 -0.0005232718844687642 -1.4411011489604081e-05
+      hidden angularVelocity_11 9.763042619569877e-05 0.00011541660023651551 -0.0005786227549311149
+      hidden rotation_12 0 0 -0.9999999999999999 0.5199999905472348
+      hidden position_12_0 -0.052300000459313434
+      hidden linearVelocity_12 0.0002176949621384871 -0.0005458679413611759 -1.4644570208493968e-05
+      hidden angularVelocity_12 9.76287727490858e-05 0.00011541653101791388 -0.0005786188592144565
+      hidden linearVelocity_13 0.00023496966038844105 -0.0005614602836510761 -1.484945605380302e-05
+      hidden angularVelocity_13 9.762877259861987e-05 0.00011541653013923677 -0.0005786188540765667
+      hidden rotation_14 0.7068252247824606 0.7073882252077712 2.118073971720496e-05 3.141634390425388
+      hidden position_14_0 0.0495116417235247
+      hidden linearVelocity_14 0.00017820211025537013 -0.000498550140873704 -1.3983783693447842e-05
+      hidden angularVelocity_14 9.806736566472777e-05 0.00011533509294660676 -0.0005791361136420191
+      hidden rotation_15 0 0 1 1.1642604420890418e-05
+      hidden position_15_0 5.313321483577888e-09
+      hidden linearVelocity_15 0.00020153700896723034 -0.0005054230056324134 -1.0234657972887496e-05
+      hidden angularVelocity_15 9.765400609371442e-05 0.0001154186696422228 -0.0005786948497799494
+      hidden rotation_16 0 0 -1 0.519999990971645
+      hidden position_16_0 -0.052300000459283215
+      hidden linearVelocity_16 0.0002270888591537995 -0.0005280270432115754 -1.0468241087006409e-05
+      hidden angularVelocity_16 9.765249206069513e-05 0.00011541860367036939 -0.0005786912643902316
+      hidden linearVelocity_17 0.0002443650650509776 -0.0005436227138119017 -1.0672753243508107e-05
+      hidden angularVelocity_17 9.765249184592306e-05 0.00011541860279291179 -0.0005786912591071992
+      hidden rotation_18 0 0 1 1.8371385344770487e-07
+      hidden position_18_0 2.2620465677048045e-08
+      hidden linearVelocity_18 0.00018331756673679143 -0.00045630039545158617 -7.506291993545586e-06
+      hidden angularVelocity_18 5.008969558140991e-06 0.00014272751681186058 -0.0006208947211898058
+      hidden rotation_19 0 0 -1 0.5199999774874033
+      hidden position_19_0 -0.052300188887299474
+      hidden linearVelocity_19 0.0002169148644969655 -0.0004481231987458493 -5.402171115681718e-06
+      hidden angularVelocity_19 5.035200823213041e-06 0.00014272753010202748 -0.0006209534312423367
+      hidden rotation_20 0 0 -1 1.8848643661548975e-07
+      hidden linearVelocity_20 0.00023972834817030095 -0.0004424069612042643 -3.9149056811819945e-06
+      hidden angularVelocity_20 5.035201822628293e-06 0.00014272752886171906 -0.0006209534254153753
+      translation 0 0 0.1
+      controller "my_controller"
+      toolSlot [
+        Emitter {
+          translation 0 0.08 0
+        }
+        DistanceSensor {
+          translation 0 0.1 0.03
+          rotation 0 0 1 1.8325996938995748
+        }
+        Robotiq3fGripper {
+          rotation 0 0 1 0.261799
+        }
+        Camera {
+          translation 0 0.1 0
+          rotation 0 0 1 1.9635290795404021
+          name "CAM"
+          fieldOfView 1.4
+          width 360
+          height 270
+          antiAliasing TRUE
+          recognition Recognition {
+          }
+        }
+      ]
+    }
+    Shape {
+      appearance Copper {
+      }
+      geometry Box {
+        size 0.4 0.6 0.2
+      }
+    }
+  ]
+  name "robot_stand"
+  controller "supervisorController"
+  supervisor TRUE
+}
+Robot {
+  translation 0.3937229119095974 1.7069906950713194 0.07820795846466055
+  rotation -2.409871689469302e-05 -3.3617331964737146e-05 0.9999999991445633 -2.7889181182571305
+  children [
+    DEF BODY Shape {
+      appearance PBRAppearance {
+        baseColor 0.917647 0.145098 0.145098
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.4 0.2 0.1
+      }
+    }
+    DEF WHEEL1 HingeJoint {
+      jointParameters HingeJointParameters {
+        position 6.511783113472261
+        axis 0 2 0
+        anchor 0.1 0.12 0
+      }
+      device [
+        RotationalMotor {
+          name "wheel1"
+        }
+      ]
+      endPoint Solid {
+        translation 0.10008928595096475 0.12000000000000743 0.0003913975586837862
+        rotation -0.9871444518839477 -0.11301679975110214 0.11301784854066085 4.699446178759024
+        children [
+          DEF WHEEL Shape {
+            appearance PBRAppearance {
+              baseColor 0.305882 0.898039 0.25098
+              roughness 1
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.05
+              radius 0.08
+              subdivision 24
+            }
+          }
+        ]
+        boundingObject USE WHEEL
+        physics Physics {
+        }
+        linearVelocity -0.07509560155534387 -0.027658658777117814 0.00045812939815778153
+        angularVelocity 0.3456613256479714 -0.9385794860388478 -2.3015489865620516e-05
+      }
+    }
+    DEF WHEEL2 HingeJoint {
+      jointParameters HingeJointParameters {
+        position 6.499710317170007
+        axis 0 2 0
+        anchor 0.1 -0.12 0
+      }
+      device [
+        RotationalMotor {
+          name "wheel2"
+        }
+      ]
+      endPoint Solid {
+        translation 0.10017197094273729 -0.11999999999999278 0.0003623446495916822
+        rotation -0.9884572114786284 -0.10712719460638367 0.1071265851768826 4.700776666906345
+        children [
+          USE WHEEL
+        ]
+        name "solid(1)"
+        boundingObject USE WHEEL
+        physics Physics {
+        }
+        linearVelocity -0.07508375954215907 -0.027654043038457053 0.00042223284787643126
+        angularVelocity 0.3456606454955795 -0.9385775854984614 -2.3008798664081807e-05
+      }
+    }
+    DEF WHEEL3 HingeJoint {
+      jointParameters HingeJointParameters {
+        position 6.497830342020848
+        axis 0 1 0
+        anchor -0.1 0.12 0
+      }
+      device [
+        RotationalMotor {
+          name "wheel3"
+        }
+      ]
+      endPoint Solid {
+        translation -0.09982802910225444 0.12000000000000699 0.00036234467097483864
+        rotation -0.9886554644604917 -0.10620816916512599 0.10620827366547855 4.700976794535253
+        children [
+          USE WHEEL
+        ]
+        name "solid(2)"
+        boundingObject USE WHEEL
+        physics Physics {
+        }
+        linearVelocity -0.07508034834489341 -0.027648588210134623 0.0004169237983911117
+        angularVelocity 0.34566016169845104 -0.9385769112565823 -2.2990491451450683e-05
+      }
+    }
+    DEF WHEEL4 HingeJoint {
+      jointParameters HingeJointParameters {
+        position 6.500006139509334
+        axis 0 1 0
+        anchor -0.1 -0.12 0
+      }
+      device [
+        RotationalMotor {
+          name "wheel4"
+        }
+      ]
+      endPoint Solid {
+        translation -0.09982802905823938 -0.11999999999999278 0.0003623446500847879
+        rotation -0.9884258835807183 -0.10727083808416903 0.10727180414440877 4.70074308038605
+        children [
+          USE WHEEL
+        ]
+        name "solid(3)"
+        boundingObject USE WHEEL
+        physics Physics {
+        }
+        linearVelocity -0.07508521765025153 -0.027650118261210294 0.0004623837679845598
+        angularVelocity 0.3456604570259174 -0.9385776576103086 -2.2983882353756845e-05
+      }
+    }
+    DEF DS_RIGHT DistanceSensor {
+      translation 0.1 -0.03 0
+      rotation 0 0 1 -0.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.184314 0.596078 0.847059
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.01 0.01 0.01
+          }
+        }
+      ]
+      name "ds_right"
+    }
+    DEF DS_LEFT DistanceSensor {
+      translation 0.1 0.03 0
+      rotation 0 0 1 0.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.184314 0.596078 0.847059
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.01 0.01 0.01
+          }
+        }
+      ]
+      name "ds_left"
+    }
+  ]
+  boundingObject USE BODY
+  physics Physics {
+    density -1
+    mass 10
+  }
+  controller "fourwheelcontroller"
+  linearVelocity -0.07473805799173952 -0.027524624661322578 0.0005870316604058085
+  angularVelocity 0.0002515670708941302 -0.00012573119451709294 3.355197747231021e-05
+}
