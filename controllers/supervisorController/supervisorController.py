@@ -13,7 +13,6 @@ while sv.step(timestep) != -1:
     speed = conveyor.getField('speed')
     if(receiver.getQueueLength()>0):
         if(receiver.getString() == 'WAITING'):
-            print('Waiting chile')
             speed.setSFFloat(0.3)
         else:
             speed.setSFFloat(0.0)
